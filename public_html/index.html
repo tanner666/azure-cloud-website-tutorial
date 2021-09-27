@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Cloud Website Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../scripts/scripts.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Azure Cloud Website Tutorial</a>
+            
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navmenu"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="cli-tutorial.html" class="nav-link">Command Line</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="azure-tutorial.html" class="nav-link">Azure Cloud</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="docker-tutorial.html" class="nav-link">Docker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="git-tutorial.html" class="nav-link">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vi-tutorial.html" class="nav-link">Vi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-5 text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h2>Learn to Deploy a Website on <span class="text-primary">Azure Cloud</span></h2>
+                    <p class="lead my-4">
+                      This tutorial will teach you all the required technologies and skills
+                      to build and deploy a website using Docker and Azure Cloud using 
+                      nothing more than the command line.
+                    </p>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Required Knowledge -->
+    <section class="text-center text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>Required Knowledge</strong></h2>          
+        </div>
+        <div>
+          <p>The tutorial will assume you have solid foundational knowledge of the following:</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="cli-tutorial.html" class="nounderline">Command Line</a></li>
+            <li class="list-group-item"><a class="nounderline" href="azure-tutorial.html">Azure Cloud</a></li>
+            <li class="list-group-item"><a class="nounderline" href="docker-tutorial.html">Docker</a></li>
+            <li class="list-group-item"><a class="nounderline" href="git-tutorial.html">Git</a></li>
+            <li class="list-group-item"><a class="nounderline" href="vi-tutorial.html">Vi</a></li>
+          </ul>
+          <p>If you do not have knowledge of one, or more, of them, click the link to be redirected to the corresponding tutorial for it. Otherwise, continue to the tutorial below.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Getting Started -->
+    <!-- add a section about creating a new branch, making the index.html changes, then merging main with branch -->
+    <section class="text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center">
+                <h2 class="py-2"><strong>Getting Started</strong></h2>
+            </div>
+            <div>
+                <ol>
+                    <li>
+                        If you are on Windows, either open up Git Bash, or open up a command prompt and enter the command <kbd>bash</kbd>.
+                        If you are on macOS or Linux, open up a terminal.
+                    </li>
+                    <li>
+                        This tutorial is going to assume you are working in the <strong class="keyword">Desktop</strong> directory. 
+                        Create a directory wherever you like, naming it something relevant to the website. So, <strong class="keyword">cd</strong>
+                        into whatever directory you would like to store your website directory in. Once you are there, create another directory to store the website files
+                        by typing <kbd>mkdir &ltname-of-directory&gt</kbd> into the terminal. For example, you could name your directory 
+                        <strong class="keyword">azure-cloud-website</strong>. Once your website directory is created, <strong class="keyword">cd</strong> into it. You
+                        should now be working in your project's directory. To ensure this, enter <kbd>pwd</kbd> into the terminal and check that the output matches what
+                        you'd expect it to.
+                    </li>
+                    <li>
+                        Create a directory called <strong class="keyword">public_html</strong> by entering <kbd>mkdir public_html</kbd> into the terminal.
+                    </li>
+                    <li>
+                        Create a file within the <strong class="keyword">public_html</strong> directory called <strong class="keyword">index.html</strong> by entering <kbd>touch public_html/index.html</kbd> into the terminal.
+                    </li>
+                    <li>
+                        Create a README file within your project's root directory by entering <kbd>touch README.md</kbd> into the terminal.
+                    </li>
+                </ol>
+                <p>At this point, you should have your project's root directory, and both a file called <strong class="keyword">README.md</strong>
+                    and another directory called <strong class="keyword">public_html</strong> that contains your HTML files in the root directory.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editing the HTML document -->
+    <section class="text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center">
+                <h2 class="py-2"><strong>Editing the HTML File</strong></h2>
+            </div>
+            <div>
+                <p>This section will teach you how to edit the <strong class="keyword">index.html</strong> file using <strong class="keyword">vi</strong>.</p>
+                <p>Open the <strong class="keyword">index.html</strong> in vi using the command <kbd>vi public_html/index.html</kbd> in your terminal. 
+                    Copy the HTML template from below. The template has Bootstrap added to it, ready to use. Go back to the terminal, hit <kbd>i</kbd> to enter insert mode, 
+                    and paste it in. Make any changes you want. When you are done, hit <kbd>esc</kbd> and then enter <kbd>:wq</kbd> to write the changes to the file and quit.
+                    You have succesfully edited your HTML file!
+                </p>
+                <pre class="pre-scrollable" id="boilerPlateCode">
+                    <code class="boilerplate">
+    &lt;!doctype html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous"
+        &gt;
+                        
+    &lt;title&gt;Hello, world!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+                        
+        &lt;script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous"&gt;
+        &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+                    </code>
+                </pre>
+                <p>At this point, be sure to stage your changes and commit them. If you'd like to see your webpage in the browser, enter <kbd>start public_html/index.html</kbd> into the terminal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creating the Docker Files -->
+    <section class="text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center">
+                <h2 class="py-2"><strong>Creating the Docker Files</strong></h2>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

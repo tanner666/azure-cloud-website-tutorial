@@ -1,0 +1,18 @@
+.nounderline {
+    text-decoration: none !important;
+}
+
+.keyword {
+    color: #40413E;
+}
+
+kbd {
+    background-color: #D4D5D2;
+    color: black;
+}
+
+pre code {
+    background-color: #f8f9fa;
+    display: block;
+    box-sizing: border-box;
+}
