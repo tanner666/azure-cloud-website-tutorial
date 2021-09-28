@@ -83,7 +83,6 @@
     </section>
 
     <!-- Getting Started -->
-    <!-- add a section about creating a new branch, making the index.html changes, then merging main with branch -->
     <section class="text-center text-sm-start">
         <div class="container">
             <div class="d-sm-flex align-items-center">
@@ -135,7 +134,7 @@
                     You have succesfully edited your HTML file!
                 </p>
                 <pre class="pre-scrollable" id="boilerPlateCode">
-                    <code class="boilerplate">
+                    <code class="boilerplate overflow-auto">
     &lt;!doctype html&gt;
     &lt;html lang="en"&gt;
     &lt;head&gt;
@@ -174,7 +173,75 @@
                 <h2 class="py-2"><strong>Creating the Docker Files</strong></h2>
             </div>
             <div>
-
+                <p>This section of the tutorial is going to go over creating the necessary Docker files in order to set up an Apache Docker container.</p>
+                <ol>
+                    <li>
+                        Create a new working branch by entering <kbd class="kbinput">git checkout -b &lt;name of branch&gt; into your terminal</kbd>. For the purpose of this tutorial, we are going to name the branch <strong class="keyword">docker</strong>.
+                        The <kbd class="kbinput">git checkout -b</kbd> command creates a new branch and automatically moves into it.
+                    </li>
+                    <li>
+                        Create a file called <strong class="keyword">Dockerfile</strong> by entering <kbd class="kbinput">touch Dockerfile</kbd> into the terminal.
+                    </li>
+                    <li>
+                        Edit the Dockerfile with vi by entering <kbd class="kbinput">vi Dockerfile</kbd> into the terminal.
+                    </li>
+                    <li>
+                        Hit <kbd class="kbinput">i</kbd> on your keyboard, paste the below code into the terminal, 
+                        hit <kbd class="kbinput">esc</kbd> and enter <kbd class="kbit">:wq</kbd> to save and exit editing.
+                        <pre class="pre-scrollable" id="boilerPlateCode">
+                            <code class="boilerplate px-4">
+FROM httpd:2.4
+COPY ./public_html/ /usr/local/apache2/htdocs/ 
+                            </code>
+                        </pre>
+                        <p>At this point, your Dockerfile is complete.</p>
+                    </li>
+                    <p>
+                        Now we are going to create the <strong class="keyword">docker-compose</strong> file.
+                        This file is used to create and start a container.
+                    </p>
+                    <li>
+                        Enter <kbd class="kbinput">touch docker-compose.yml</kbd> into your terminal.
+                        This creates a file named <strong class="keyword">docker-compose.yml</strong>
+                        used to create and start your containers.
+                    </li>
+                    <li>
+                        Edit the docker-compose file with vi by entering <kbd class="kbinput">vi docker-compose.yml</kbd> into the terminal.
+                    </li>
+                    <li>
+                        Hit <kbd class="kbinput">i</kbd> on your keyboard, paste the below code into the terminal, 
+                        hit <kbd class="kbinput">esc</kbd> and enter <kbd class="kbit">:wq</kbd> to save and exit editing.
+                    </li>
+                    <pre class="pre-scrollable" id="boilerPlateCode">
+                        <code class="boilerplate px-4 overflow-auto">
+version: "3.2"
+services:
+    apache:
+        build: . 
+        ports:
+            - "8080:80"
+        volumes:
+            - ./public_html/:/usr/local/apache2/htdocs/                            
+                        </code>
+                    </pre>
+                </ol>
+                <p>At this point, be sure to stage and commit your changes.</p>
+                <p>
+                    Remember, you are still working in a different branch than your main branch.
+                    We are now going to merge the two branches.
+                </p>
+                <ol>
+                    <li>
+                        Make sure you have committed your changes (the Dockerfile and docker-compose.yml file).
+                    </li>
+                    <li>
+                        Switch back to your main branch by entering <kbd class="kbinput">git checkout main</kbd> into your terminal.
+                        Notice that you are now working in the main branch.
+                    </li>
+                    <li>
+                        Enter <kbd class="kbinput">git merge &lt;name of branch&gt;</kbd> 
+                    </li>
+                </ol>
             </div>
         </div>
     </section>
