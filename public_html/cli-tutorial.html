@@ -1,47 +1,90 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
-    <title>CLI</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLI Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../scripts/scripts.js"></script>
   </head>
   <body>
-    <div class = "page-header">
-      <h1>
-        Command Line Interface (CLI)
-      </h1>
-    </div>
-    <div class = "commands">
-      <h5>
-        Common Commands:<br>
-      </h5>
-      <p>
-        $pwd --- present working directory (gives full path to present directory)<br>
-        <li> / forward slash means absolute directory path (from root of drive)<br></li>
-        <li> forward slash mean relative path<br></li>
-        $cd &ltfoldername&gt --- change directory<br>
-        <li> ..  --- makes directory position move back one<br></li>
-        <li> .. is universal signal for reverse<br></li>
-        <li> .  is the current directory<br></li>
-        <li> ~ --- takes you to home directory<br></li>
-        $ls --- lists everything inside current directory<br>
-        <li> a directory after ls and will list inside of directory<br></li>
-        $mkdir &lt new folder name&gt --- creates a new directory<br>
-        $touch &ltnew file name &gt --- creates an empty file<br>
-        $rm &ltfolder/file name&gt --- remove folder/file<br>
-        <li> $rm -r &ltdirectory&gt<br></li>
-        <li> -r means recursive (loops through directory to delete whole directory)<br></li>
-        <li> $rm -f <br></li>
-        <li> -f is a force delete (can be used on .git repositories)<br></li>
-        $mv &ltoldfilename&gt &ltnewfilename&gt --- renames files<br>
-        $mv &ltfile name&gt &ltfolder name&gt/<br>
-      </p>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+      <div class="container">
+          <a href="index.html" class="navbar-brand">Azure Cloud Website Tutorial</a>
+          
+          <button 
+              class="navbar-toggler" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navmenu"
+          >
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navmenu">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a href="cli-tutorial.html" class="nav-link text-light">Command Line</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="azure-tutorial.html" class="nav-link">Azure Cloud</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="docker-tutorial.html" class="nav-link">Docker</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="git-tutorial.html" class="nav-link">Git</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="vi-tutorial.html" class="nav-link">Vi</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-4 text-center text-sm-start">
+      <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+              <div>
+                  <h2>Command Line Interface (CLI)</h2>
+                </div>
+          </div>
+      </div>
+    </section>
+    <!-- Common Commands -->
+    <section class="text-center text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>Common Commands</strong></h2>          
+        </div>
+        <div>
+          <p>
+            $pwd --- present working directory (gives full path to present directory)<br>
+            --- / forward slash means absolute directory path (from root of drive)<br>
+            --- forward slash mean relative path<br>
+            $cd &ltfoldername&gt --- change directory<br>
+            --- .. makes directory position move back one<br>
+            ------ .. is universal signal for reverse<br>
+            --- .  is the current directory<br>
+            --- ~  takes you to home directory<br>
+            $ls --- lists everything inside current directory<br>
+            --- type a directory after ls to list contents of directory<br>
+            $mkdir &ltnew folder name&gt --- creates a new directory<br>
+            $touch &ltnew file name&gt --- creates an empty file<br>
+            $rm &ltfolder/file name&gt --- remove folder/file<br>
+            --- $rm -r &ltdirectory&gt<br>
+            ------ -r means recursive (loops through directory to delete whole directory)<br>
+            --- $rm -f <br>
+            ------ -f is a force delete (can be used on .git repositories, but use with caution)<br>
+            $mv &ltoldfilename&gt &ltnewfilename&gt --- renames files<br>
+            $mv &ltfile name&gt &ltfolder name&gt/ --- moves file to folder<br>
+          </p>
+        </div>
+      </div>
+    </section>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
