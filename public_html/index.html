@@ -84,7 +84,7 @@
     </section>
 
     <!-- Required Knowledge -->
-    <section class="text-center text-sm-start">
+    <section class="text-sm-start">
       <div class="container">
         <div class="d-sm-flex align-items-md-center">
           <h2 class="py-2"><strong>Required Knowledge</strong></h2>          
@@ -104,7 +104,7 @@
     </section>
 
     <!-- Getting Started -->
-    <section class="text-center text-sm-start">
+    <section class="text-sm-start">
         <div class="container">
             <div class="d-sm-flex align-items-center">
                 <h2 class="py-2"><strong>Getting Started</strong></h2>
@@ -142,7 +142,7 @@
     </section>
 
     <!-- Editing the HTML document -->
-    <section class="text-center text-sm-start">
+    <section class="text-sm-start">
         <div class="container">
             <div class="d-sm-flex align-items-center">
                 <h2 class="py-2"><strong>Editing the HTML File</strong></h2>
@@ -188,7 +188,7 @@
     </section>
 
     <!-- Creating the Docker Files -->
-    <section class="text-center text-sm-start">
+    <section class="text-sm-start">
         <div class="container">
             <div class="d-sm-flex align-items-center">
                 <h2 class="py-2"><strong>Creating the Docker Files</strong></h2>
@@ -197,18 +197,18 @@
                 <p>This section of the tutorial is going to go over creating the necessary Docker files in order to set up an Apache Docker container.</p>
                 <ol>
                     <li>
-                        Create a new working branch by entering <kbd class="kbinput">git checkout -b &lt;name of branch&gt; into your terminal</kbd>. For the purpose of this tutorial, we are going to name the branch <strong class="keyword">docker</strong>.
-                        The <kbd class="kbinput">git checkout -b</kbd> command creates a new branch and automatically moves into it.
+                        Create a new working branch by entering <kbd>git checkout -b &lt;name of branch&gt; into your terminal</kbd>. For the purpose of this tutorial, we are going to name the branch <strong class="keyword">docker</strong>.
+                        The <kbd>git checkout -b</kbd> command creates a new branch and automatically moves into it.
                     </li>
                     <li>
-                        Create a file called <strong class="keyword">Dockerfile</strong> by entering <kbd class="kbinput">touch Dockerfile</kbd> into the terminal.
+                        Create a file called <strong class="keyword">Dockerfile</strong> by entering <kbd>touch Dockerfile</kbd> into the terminal.
                     </li>
                     <li>
-                        Edit the Dockerfile with vi by entering <kbd class="kbinput">vi Dockerfile</kbd> into the terminal.
+                        Edit the Dockerfile with vi by entering <kbd>vi Dockerfile</kbd> into the terminal.
                     </li>
                     <li>
-                        Hit <kbd class="kbinput">i</kbd> on your keyboard, paste the below code into the terminal, 
-                        hit <kbd class="kbinput">esc</kbd> and enter <kbd class="kbit">:wq</kbd> to save and exit editing.
+                        Hit <kbd>i</kbd> on your keyboard, paste the below code into the terminal, 
+                        hit <kbd>esc</kbd> and enter <kbd class="kbit">:wq</kbd> to save and exit editing.
                         <pre class="pre-scrollable" id="boilerPlateCode">
                             <code class="boilerplate px-4">
 FROM httpd:2.4
@@ -222,16 +222,16 @@ COPY ./public_html/ /usr/local/apache2/htdocs/
                         This file is used to create and start a container.
                     </p>
                     <li>
-                        Enter <kbd class="kbinput">touch docker-compose.yml</kbd> into your terminal.
+                        Enter <kbd>touch docker-compose.yml</kbd> into your terminal.
                         This creates a file named <strong class="keyword">docker-compose.yml</strong>
                         used to create and start your containers.
                     </li>
                     <li>
-                        Edit the docker-compose file with vi by entering <kbd class="kbinput">vi docker-compose.yml</kbd> into the terminal.
+                        Edit the docker-compose file with vi by entering <kbd>vi docker-compose.yml</kbd> into the terminal.
                     </li>
                     <li>
-                        Hit <kbd class="kbinput">i</kbd> on your keyboard, paste the below code into the terminal, 
-                        hit <kbd class="kbinput">esc</kbd> and enter <kbd class="kbit">:wq</kbd> to save and exit editing.
+                        Hit <kbd>i</kbd> on your keyboard, paste the below code into the terminal, 
+                        hit <kbd>esc</kbd> and enter <kbd class="kbit">:wq</kbd> to save and exit editing.
                     </li>
                     <pre class="pre-scrollable" id="boilerPlateCode">
                         <code class="boilerplate px-4 overflow-auto">
@@ -256,15 +256,15 @@ services:
                         Make sure you have committed your changes (the Dockerfile and docker-compose.yml file).
                     </li>
                     <li>
-                        Switch back to your main branch by entering <kbd class="kbinput">git checkout main</kbd> 
+                        Switch back to your main branch by entering <kbd>git checkout main</kbd> 
                         into your terminal.Notice that you are now working in the main branch.
                     </li>
                     <li>
-                        Enter <kbd class="kbinput">git merge &lt;name of branch&gt;</kbd> to merge the changes onto your main branch. 
+                        Enter <kbd>git merge &lt;name of branch&gt;</kbd> to merge the changes onto your main branch. 
                     </li>
                     <li>
                         Now that your changes are saved on the main brach, delete the testing branch by entering 
-                        <kbd class="kbinput">git branch -d &lt;name of branch&gt;</kbd>.
+                        <kbd>git branch -d &lt;name of branch&gt;</kbd>.
                     </li>
                 </ol>
             </div>
@@ -272,7 +272,7 @@ services:
     </section>
 
     <!-- Deploying Containers to Azure -->
-    <section class="text-center text-sm-start">
+    <section class="text-sm-start">
         <div class="container">
             <div class="d-sm-flex align-items-center">
                 <h2 class="py-2"><strong>Create the Azure ACI Context</strong></h2>
@@ -288,7 +288,7 @@ services:
                 <h4 class="py-2"><strong>Log Into Azure</strong></h4>
                 <p>
                     The first thing you need to do is to login to Azure. Do this by entering
-                    <kbd class="kbinput">docker login azure</kbd> into the terminal.
+                    <kbd>docker login azure</kbd> into the terminal.
                 </p>
                 <p>
                     This should either open up a browser automatically that will allow you to login to your Azure account, 
@@ -307,7 +307,7 @@ services:
                 </p>
                 <p>
                     Let's first take a look at what contexts we currently have on the local machine.
-                    Run the <kbd class="kbinput">docker context list</kbd> command in the terminal to see
+                    Run the <kbd>docker context list</kbd> command in the terminal to see
                     a list of contexts.
                 </p>
                 <p>
@@ -317,14 +317,14 @@ services:
                 </p>
                 <p>
                     Let's now create an ACI context that we will use to run containers.
-                    Run the <kbd class="kbinput">docker context create aci azurecloud</kbd>. 
+                    Run the <kbd>docker context create aci azurecloud</kbd>. 
                     The first thing the cli will ask is what subscription you would like to use. 
                     If you only have one then docker will use that one. It will then ask you
                     to select the resource group you want to use. Choose the "create new resource
                     group" option.
                 </p>
                 <p>
-                    Enter <kbd class="kbinput">docker context list</kbd> into the terminal to see a list of all contexts. 
+                    Enter <kbd>docker context list</kbd> into the terminal to see a list of all contexts. 
                     You should see the one that you just created listed.
                 </p>
             </div>
@@ -332,24 +332,24 @@ services:
     </section>
     
     <!--  -->
-    <section class="text-center text-sm-start">
+    <section class="text-sm-start">
         <div class="container">
             <div class="d-sm-flex align-items-center">
                 <h2 class="py-2">Run a Container in ACI from Your Local Machine</h2>
             </div>
             <div>
                 <p>
-                    Make sure that you're using the local Docker context. Enter <kbd class="kbinput">docker context use default</kbd>
+                    Make sure that you're using the local Docker context. Enter <kbd>docker context use default</kbd>
                     into the terminal to ensure that you're using the default context.
                 </p>
                 <p>
-                    We can now build and start the application using the <kbd class="kbinput">docker-compose up --build</kbd> command.
+                    We can now build and start the application using the <kbd>docker-compose up --build</kbd> command.
                     Navigate to <a href="http://localhost:8080" class="nounderline" target="_blank">http://localhost:8080</a> to see the webpage.
                 </p>
 
                 <h4 class="py-2"><strong>Compose on ACI</strong></h4>
                 <p>
-                    Ensure you are logged into your Docker Hub account by entering <kbd class="kbinput">docker login</kbd> into the terminal and follow the
+                    Ensure you are logged into your Docker Hub account by entering <kbd>docker login</kbd> into the terminal and follow the
                     prompts.
                 </p>
                 <ol>
@@ -360,23 +360,23 @@ services:
                         Ensure that you are working in your project's root directory still in your terminal.
                     </li>
                     <li>
-                        Enter <kbd class="kbinput">docker build -t &lt;your Docker Hub username&gt;/&lt;your repository name&gt;:latest .</kbd> in the terminal to build and tag your image.
+                        Enter <kbd>docker build -t &lt;your Docker Hub username&gt;/&lt;your repository name&gt;:latest .</kbd> in the terminal to build and tag your image.
                     </li>
                     <li>
-                        This image is ready to be pushed to the repository now. Enter <kbd class="kbinput">docker push 
+                        This image is ready to be pushed to the repository now. Enter <kbd>docker push 
                         &lt;your Docker Hub username&gt;/&lt;your repository name&gt;:latest</kbd> into the terminal.
                         <p>Now that the image is on Docker Hub, we can compose and run it on ACI.</p>
                     </li>
                     <li>
-                        Switch to the ACI context by entering <kbd class="kbinput">docker context use azurecloud</kbd> into the terminal.
+                        Switch to the ACI context by entering <kbd>docker context use azurecloud</kbd> into the terminal.
                         <p>
                             Note: If you didn't name your ACI context <strong class="keyword">azurecloud</strong>, substitute it with whatever you named it.
-                            If you are unsure, check the list of contexts by entering <kbd class="kbinput">docker context list</kbd> into the terminal.
+                            If you are unsure, check the list of contexts by entering <kbd>docker context list</kbd> into the terminal.
                         </p>
                     </li>
                     <li>
                         We can now run containers in the cloud. Enter 
-                        <kbd class="kbinput">docker run -d --name mywebsite -p 80:80 &lt;your Docker Hub username&gt;/&lt;your repository name&gt;:latest</kbd>
+                        <kbd>docker run -d --name mywebsite -p 80:80 &lt;your Docker Hub username&gt;/&lt;your repository name&gt;:latest</kbd>
                         into the terminal.
                     </li>
                     <li>
@@ -384,7 +384,7 @@ services:
                     </li>
                     <li>
                         You can get the IP address for the site by going to the container on the Azure portal, or by entering
-                        <kbd class="kbinput">docker ps</kbd> into the terminal and getting the IP from the output.
+                        <kbd>docker ps</kbd> into the terminal and getting the IP from the output.
                     </li>
                 </ol>
 

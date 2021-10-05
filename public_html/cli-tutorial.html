@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLI Tutorial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/main.css">
-    <script src="../scripts/scripts.js"></script>
+
+    <style>
+      kbd {
+          background-color: #D4D5D2;
+          color: black;
+        }
+        .nounderline {
+          text-decoration: none !important;
+        }
+    </style>
+
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
@@ -55,37 +64,62 @@
       </div>
     </section>
     <!-- Common Commands -->
-    <section class="text-center text-sm-start">
+    <section class="text-sm-start">
       <div class="container">
+        <br>
+        <p>
+          This tutorial goes over commands used in the Bash command line interface (CLI). This is different than Windows command prompt or Windows Powershell.
+          Before you begin practicing these commands, be sure you have the Bash CLI. For macOS and Linux users, this should be native. Windows users should
+          have Bash included in their Git download. If you don't have Git, and by extension Git Bash, installed, read our tutorial on 
+          <a href="./git-tutorial.html" class="nounderline">Git</a>.
+        </p>
         <div class="d-sm-flex align-items-md-center">
           <h2 class="py-2"><strong>Common Commands</strong></h2>          
         </div>
         <div>
-          <p>
-            $pwd --- present working directory (gives full path to present directory)<br>
-            --- / forward slash means absolute directory path (from root of drive)<br>
-            --- forward slash mean relative path<br>
-            $cd &ltfoldername&gt --- change directory<br>
-            --- .. makes directory position move back one<br>
-            ------ .. is universal signal for reverse<br>
-            --- .  is the current directory<br>
-            --- ~  takes you to home directory<br>
-            $ls --- lists everything inside current directory<br>
-            --- type a directory after ls to list contents of directory<br>
-            $mkdir &ltnew folder name&gt --- creates a new directory<br>
-            $touch &ltnew file name&gt --- creates an empty file<br>
-            $rm &ltfolder/file name&gt --- remove folder/file<br>
-            --- $rm -r &ltdirectory&gt<br>
-            ------ -r means recursive (loops through directory to delete whole directory)<br>
-            --- $rm -f <br>
-            ------ -f is a force delete (can be used on .git repositories, but use with caution)<br>
-            $mv &ltoldfilename&gt &ltnewfilename&gt --- renames files<br>
-            $mv &ltfile name&gt &ltfolder name&gt/ --- moves file to folder<br>
-          </p>
-        </div>
-      </div>
-    </section>
-    
+          <ul>
+            <li>
+              <kbd>pwd</kbd>: Stands for present working directory. Returns the full path to the present directory.
+            </li>
+            <li>
+              <kbd>cd &lt;directory-name | directory-path&gt;</kbd>: Stands for change directory. Used to change the current working directory to the specified one.
+              <ul>
+                <li>
+                  Entering a <kbd>..</kbd> in place of a path will take you back one directory. The <kbd>.</kbd> argument stands for the current directory, and each
+                  additional period goes back one directory.
+                </li>
+                <li>
+                  The <kbd>~</kbd> key can be used to take you to the root directory of you PC.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <kbd>ls</kbd>: Lists the files and folders in a given directory.
+            </li>
+            <li>
+              <kbd>touch &lt;file-name&gt;</kbd>: Creates a file with the specified file name in the current directory.
+            </li>
+            <li>
+              <kbd>mkdir &lt;directory-name&gt;</kbd>: Creates a folder of the specified file name in the current directory.
+            </li>
+            <li>
+              <kbd>rm &lt;file-name&gt;</kbd>: Delete file.
+              <ul>
+                <li>
+                  In order to delete folders, you have to pass the <kbd>-rf</kbd> tag into your command: <kbd>rm -rf &lt;dir-name&gt;</kbd>
+                  The <kbd>-r</kbd> tag stands for recursive, meaning it will loop through the directory deleting all contents of the directory
+                  before it deletes the directory itself. The <kbd>-f</kbd> tag stands for force.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <kbd>mv &lt;old-name&gt; &lt;new-name&gt;</kbd>: Rename file <kbd>&lt;old-name&gt;</kbd> to <kbd>&lt;new-name&gt;</kbd>.
+            </li>
+            <li>
+              <kbd>mv &lt;file&gt;... &lt;directory&gt;</kbd>: Move the specified file(s) to the specified directory.
+            </li>
+          </ul>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
   </body>

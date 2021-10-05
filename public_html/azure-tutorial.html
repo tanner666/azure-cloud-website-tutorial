@@ -6,8 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Azure Cloud</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="../styles/main.css">
-        <script src="../scripts/scripts.js"></script>
+
+        <style>
+          kbd {
+              background-color: #D4D5D2;
+              color: black;
+            }
+            .nounderline {
+              text-decoration: none !important;
+            }
+        </style>
+
       </head>
       <body>
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
@@ -49,13 +58,13 @@
           <div class="container">
               <div class="d-sm-flex align-items-center justify-content-between">
                   <div>
-                      <h2>Azure Cloud</h2>
+                      <h2>Azure Cloud Tutorial</h2>
                     </div>
               </div>
           </div>
         </section>
     <!-- Definition -->
-    <section class="text-center text-sm-start">
+    <section class="text-sm-start">
       <div class="container">
         <div class="d-sm-flex align-items-md-center">
           <h2 class="py-2"><strong>What is Azure Cloud?</strong></h2>          
@@ -66,26 +75,40 @@
               In this case, Azure Cloud will be hosting the website you are creating.
           </p>
         </div>
-      </div>
-    </section>
-    <!-- Installation -->
-    <section class="text-center text-sm-start">
-      <div class="container">
+        <!-- Setup -->
         <div class="d-sm-flex align-items-md-center">
-          <h2 class="py-2"><strong>Installation</strong></h2>          
+          <h2 class="py-2"><strong>Setup</strong></h2>          
         </div>
         <div>
           <p>
-            1.) Create a container image for deployment to Azure Container Instances: 
-            <a href="https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-prepare-app" 
-            class="nav-link">https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-prepare-app</a><br>
-            2.) Create an Azure container registry and push a container image:
-            <a href="https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-prepare-acr" 
-            class="nav-link">https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-prepare-acr</a><br>
-            3.) Deploy a container application to Azure Container Instances:
-            <a href="https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-deploy-app" 
-            class="nav-link">https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-deploy-app</a><br>
+            The only thing you have to do is create an Azure account. The main tutorial will go over the necessary steps needed to deploy your
+            website to the cloud.
           </p>
+          <a 
+          href="https://azure.microsoft.com/en-us/free/?v=b&adobe_mc_sdid=SDID%3D5B4BFC93B3B26E64-607903D51B83F092%7CMCORGID%3DEA76ADE95776D2EC7F000101%40AdobeOrg%7CTS%3D1633409118&adobe_mc_ref=https%3A%2F%2Fwww.google.com%2F"
+          target="_blank"
+          class="nounderline"
+          >
+          Create your Azure account here.
+          </a>
+        </div>
+        <!-- Optional Tutorial -->
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>Optional: Tutorial</strong></h2>          
+        </div>
+        <div>
+          <p>Optionally, if you would like to get a feel for working with Azure with Docker, you can complete the tutorials below.</p>
+          <ol>
+            <li>
+               <a href="https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-prepare-app" target="_blank" class="nounderline">Create a container image for deployment to Azure Container Instances</a>
+            </li>
+            <li>
+              <a href="https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-prepare-acr" target="_blank" class="nounderline">Create an Azure container registry and push a container image</a>
+            </li>
+            <li>
+              <a href="https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-deploy-app" target="_nounderline" class="nounderline">Deploy a container application to Azure Container Instances</a>
+            </li>
+          </ol>
         </div>
       </div>
     </section>

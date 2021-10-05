@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vi</title>
+    <title>Vi Tutorial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/main.css">
-    <script src="../scripts/scripts.js"></script>
+
+    <style>
+      kbd {
+          background-color: #D4D5D2;
+          color: black;
+        }
+    </style>
+
   </head>
+  
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
       <div class="container">
           <a href="index.html" class="navbar-brand">Azure Cloud Website Tutorial</a>
@@ -38,57 +46,98 @@
                       <a href="git-tutorial.html" class="nav-link">Git</a>
                   </li>
                   <li class="nav-item">
-                      <a href="vi-tutorial.html" class="nav-link text-light">Vi</a>
+                      <a href="vi-tutorial.html" class="nav-link">Vi</a>
                   </li>
               </ul>
           </div>
       </div>
-    </nav>
+  </nav>
+  
     <!-- Showcase -->
     <section class="bg-dark text-light p-4 text-center text-sm-start">
       <div class="container">
           <div class="d-sm-flex align-items-center justify-content-between">
               <div>
-                  <h2>Vi</h2>
+                  <h2>Vi Tutorial</h2>
                 </div>
           </div>
       </div>
     </section>
-    <!-- Definition -->
-    <section class="text-center text-sm-start">
+
+    <section class="text-sm-start">
       <div class="container">
         <div class="d-sm-flex align-items-md-center">
-          <h2 class="py-2"><strong>Definition</strong></h2>          
+          <!-- Definition -->
+          <h2 class="py-2"><strong>What is vi?</strong></h2>          
         </div>
         <div>
-          <p>Vi stands for Unix Visual Editor. It is a CLI (or terminal) command that allows for the editing of files within the command line itself.</p>
+          <p>Vi stands for Unix Visual Editor. It is a CLI (terminal) command that allows for the editing of files within the command line itself.</p>
+          <ol>
+            <p>vi is a full screen editor that comes with two modes of operation:</p>
+            <li>
+              <strong>Command Mode:</strong> Commands which cause action to be taken on the file.
+            </li>
+            <li>
+              <strong>Insert Mode:</strong> Entered text is inserted into the file.
+            </li>
+          </ol>
+          <p>
+            This tutorial will teach the very basics of vi. You will learn the basic commands and knowledge needed to read from, write to, and operate
+            on files.
+          </p>
         </div>
-      </div>
-    </section>
-    <!-- Syntax -->
-    <section class="text-center text-sm-start">
-      <div class="container">
-        <div class="d-sm-flex align-items-md-center">
-          <h2 class="py-2"><strong>Syntax</strong></h2>          
+        <!-- Syntax -->
+        <div>
+          <div class="d-sm-flex align-items-md-center">
+            <h2 class="py-2"><strong>Syntax</strong></h2>          
+          </div>
+          <ul>
+            <li>
+              <kbd>vi &lt;filename&gt;</kbd> opens a file in the editor.
+              <ul>
+                <li>
+                  If the file exists, then the first page of the file will be displayed.
+                  If the file does not exist, then an empty file and screen are created which can they
+                  be edited.
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
         <div>
-          <p>$vi &ltfilename&gt --- opens a file in the editor</p>
-        </div>
-      </div>
-    </section>
-    <!-- Editor Commands -->
-    <section class="text-center text-sm-start">
-      <div class="container">
-        <div class="d-sm-flex align-items-md-center">
-          <h2 class="py-2"><strong>Editor Commands:</strong></h2>          
-        </div>
-        <div>
-          <p>i --- enters insert mode<br>
-            esc --- exits insert mode<br>
-            shift + colon --- enters command line mode<br>
-            w --- writes to the file (updates and saves file)<br>
-            q --- quits the editor<br>
-            wq --- writes and quits</p>
+          <div class="d-sm-flex align-items-md-center">
+                <!-- Editor Commands -->
+            <h2 class="py-2"><strong>Editor Commands:</strong></h2>          
+          </div>
+          <div>
+            <ul>
+              <li>
+                <kbd>i</kbd>: Enter insert mode. This is where you edit the contents of the file.
+              </li>
+              <li>
+                <kbd>esc</kbd>: Exit insert mode and enters command mode.
+              </li>
+              <li>
+                <kbd>Colon (:)</kbd>: Moves the cursor to the command line when in command mode.
+              </li>
+              <li>
+                <kbd>:x&lt;Return&gt;</kbd> / <kbd>:wq&lt;Return&gt;:</kbd> Write the changes to the file (saves changes)
+                and quit vi.
+              </li>
+              <li>
+                <kbd>:w&lt;Return&gt;</kbd>: Writes to the file (saves changes).
+              </li>
+              <li>
+                <kbd>:q&lt;Return&gt;</kbd>: Quit vi.
+              </li>
+              <li>
+                <kbd>:q!&lt;Return&gt;</kbd> Quits vi without saving changes.
+              </li>
+              <li>
+                <kbd>:wq&lt;Return&gt;</kbd>: Saves changes and quits vi.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

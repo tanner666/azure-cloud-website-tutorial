@@ -6,10 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Tutorial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/main.css">
-    <script src="../scripts/scripts.js"></script>
+
+    <style>
+      kbd {
+          background-color: #D4D5D2;
+          color: black;
+        }
+        .nounderline {
+          text-decoration: none !important;
+        }
+    </style>
+
   </head>
+
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
       <div class="container">
           <a href="index.html" class="navbar-brand">Azure Cloud Website Tutorial</a>
@@ -44,67 +55,103 @@
           </div>
       </div>
     </nav>
+    
     <!-- Showcase -->
     <section class="bg-dark text-light p-4 text-center text-sm-start">
       <div class="container">
           <div class="d-sm-flex align-items-center justify-content-between">
               <div>
-                  <h2>Git</h2>
+                  <h2>Git Tutorial</h2>
                 </div>
           </div>
       </div>
     </section>
-    <!-- Definition -->
-    <section class="text-center text-sm-start">
+
+    <section class="text-sm-start">
       <div class="container">
         <div class="d-sm-flex align-items-md-center">
+              <!-- Definition -->
           <h2 class="py-2"><strong>What is Git?</strong></h2>          
         </div>
         <div>
           <p>
-            Git is an open source version control platform, 
-            meaning that it keeps track of your current and previous code verions and any changes you make.
-            More information here:
-            <a href="https://www.educative.io/edpresso/what-is-git">https://www.educative.io/edpresso/what-is-git</a>
+            Git is an open source version control platform, meaning that it keeps track of your current and previous code verions and any changes you make.
+            For more information about Git, <a href="https://git-scm.com/" class="nounderline" target="_blank">click here</a>.
           </p>
         </div>
-      </div>
-    </section>
-    <!-- Installation -->
-    <section class="text-center text-sm-start">
-      <div class="container">
+        <!-- Installation -->
         <div class="d-sm-flex align-items-md-center">
           <h2 class="py-2"><strong>Installation</strong></h2>          
         </div>
         <div>
-          <p>
-            1.) Create a github account: <a href="https://github.com/">https://github.com/</a><br>
-            2.) Install git: <a href="https://github.com/git-guides/install-git">https://github.com/git-guides/install-git</a><br>
-          </p>
+          For a detailed guide on how to install Git on any operating system, 
+          <a href="https://github.com/git-guides/install-git" class="nounderline" target="_blank">click here</a>.
         </div>
-      </div>
-    </section>
-    <!-- Common Commands -->
-    <section class="text-center text-sm-start">
-      <div class="container">
+        <!-- Setting up Github -->
         <div class="d-sm-flex align-items-md-center">
-          <h2 class="py-2"><strong>Common Commands</strong></h2>          
+          <h2 class="py-2"><strong>Setting up GitHub (Optional)</strong></h2>          
         </div>
         <div>
           <p>
-            $git init --- creates a new git repository in current directory<br>
-            $git status --- lists current branch and commit status info<br>
-            $git add &ltfilename&gt --- ("." includes all files)<br>
-            $git commit -m &ltmessage describing commit&gt<br>
-            $git checkout (-b) &ltbranch&gt (-b makes new branch and switches to it)<br>
-            $git push &ltremote&gt &ltbranch&gt --- pushes changes to github<br>
-            $git merge &ltbranch&gt --- merges entered branch to current branch<br>
+            GitHub is a Git repository hosting service, but it adds many of its own features. 
+            While Git is a command line tool, GitHub provides a Web-based graphical interface.
+            Github provides an easy way to host your repository online in order to isolate
+            your work from the potential dangers of local machines and seamlessly collaborate
+            with other developers.
           </p>
+          <p>
+            In order to create a GitHub account, you have to navigate to their offical website.
+            <a href="https://github.com/join" class="nounderline">Join GitHub here</a>.
+          </p>
+          <p>
+            This tutorial does not require any knowledge of GitHub. However, if you would like to learn
+            how to use GitHub you can follow 
+            <a href="https://docs.github.com/en/get-started" class="nounderline">this getting started guide</a>.
+          </p>
+        </div>
+        <!-- Common Commands -->
+        <div>
+          <h2 class="py-2"><strong>Useful Commands</strong></h2>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <kbd class="kbinput">git init</kbd>: Creates a new Git repository in the current
+              working directory.
+            </li>
+            <li>
+              <kbd class="kbinput">git status</kbd>: Lists the current branch you are currently working
+              on, as well as any which changes have been staged, which haven't, and which files aren't being tracked by Git.
+            </li>
+            <li>
+              <kbd class="kbinput">git add &lt;filename&gt;</kbd>: Stages the indicated <em>filename</em>
+              to be ready for the next commit. Optionally, you can enter <kbd class="kbinput">.</kbd>
+              in place of a filename to add all modified files in the current directory.
+            </li>
+            <li>
+              <kbd class="kbinput">git commit -m "&lt;commit-message&gt;"</kbd>: Records stages changes to the repository. The <kbd class="kbinput">-m</kbd> tag indicates
+              that there is a commit message.
+            </li>
+            <li>
+              <kbd class="kbinput">git checkout &lt;branch-name&gt;</kbd>: Switch working branches
+              to &lt;branch-name&gt;. This allows you to text experimential features without
+              comitting them to your main, working branch. 
+            </li>
+            <li>
+              <kbd class="kbinput">git checkout -b &lt;branch-name&gt;</kbd>: Creates a new
+              branch called &lt;branch-name&gt; and automatically switches to it.
+            </li>
+            <li>
+              <kbd class="kbinput">git push &lt;remote&gt; &lt;branch-name&gt;</kbd>: Pushes the local changes to the specified branch. If no branch is specified, it the default is <em>remote origin.</em>
+            </li>
+            <li>
+              <kbd class="kbinput">git merge &lt;branch-name&gt;</kbd>: Merges the named branch changes into the current working branch.
+            </li>
+          </ul>
         </div>
       </div>
     </section>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
   </body>
 </html>
